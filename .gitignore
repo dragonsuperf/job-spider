@@ -6,6 +6,12 @@ __pycache__/
 # C extensions
 *.so
 
+# React
+build/
+node_modules/
+.DS_Store
+yarn.lock
+
 # Distribution / packaging
 .Python
 build/

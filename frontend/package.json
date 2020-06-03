@@ -1,16 +1,53 @@
 {
-  "name": "cra",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
-  },
+  "name": "job_spider_1",
+  "version": "0.0.1",
+  "description": "job_spider_frontend",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:build": "webpack",
+    "start": "webpack-dev-server --mode development --open --hot",
+    "prebuild": "rimraf dist",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "jop_spider workers",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-arrow-functions": "^7.10.1",
+    "@babel/plugin-transform-literals": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
+    "babel-loader": "^8.1.0",
+    "babel-polyfill": "^6.26.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "clsx": "^1.1.1",
+    "core-js": "^3.6.5",
+    "core-js-pure": "^3.6.5",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "install": "^0.13.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "npm": "^6.14.5",
+    "prop-types": "^15.7.2",
+    "raw-loader": "^4.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-hot-loader": "^4.12.21",
+    "regenerator-runtime": "^0.13.5",
+    "rimraf": "^3.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }

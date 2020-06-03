@@ -1,0 +1,38 @@
+{
+    "presets": [
+        [
+            "@babel/preset-react",
+            {
+                "development": true
+            }
+        ],
+        [
+            "@babel/preset-env",
+            {
+                "modules": false,
+                "useBuiltIns": "usage",
+                "corejs": 3,
+                "debug": true,
+                "targets": {
+                    "ie": 11,
+                    "chrome": 43,
+                    "firefox": 52,
+                    "edge": 40,
+                    "ios": 9,
+                    "android": 5
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-literals"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        }
+    }
+}

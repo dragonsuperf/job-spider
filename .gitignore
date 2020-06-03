@@ -7,6 +7,7 @@ __pycache__/
 *.so
 
 # React
+dist/
 build/
 node_modules/
 .DS_Store

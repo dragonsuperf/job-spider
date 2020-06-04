@@ -12,6 +12,7 @@ build/
 node_modules/
 .DS_Store
 yarn.lock
+package-lock.json
 
 # Distribution / packaging
 .Python

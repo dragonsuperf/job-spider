@@ -1,19 +1,21 @@
 import React from 'react'
-import Navbar from './layouts/navbar'
+import TopNavbar from './layouts/navbar'
+import { Container } from 'reactstrap';
 
 export const App = (props) => {
 
     return (
         <div>
-            <section className="top">
-                <Navbar></Navbar>
-            </section>
-            <section className="middle">
-
-            </section>
-            <section className="bottom">
-
-            </section>
+            <TopNavbar></TopNavbar>
+            <div className="content_area">
+                <Container className="themed-container">
+                    <h1>This is content</h1>
+                </Container>
+            </div>
+            
+            <footer class="container-fluid navbar-fixed-bottom">
+                <p>This is footer</p>
+            </footer>
         </div>
     )
 }

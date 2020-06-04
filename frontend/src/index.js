@@ -4,7 +4,8 @@ import '@babel/polyfill'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { App } from './components/App'
-require('../public/App.css')
+import '../public/bootstrap.css';
+import '../public/App.css'
 
 
 console.log(App)

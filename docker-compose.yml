@@ -10,11 +10,11 @@ services:
     env_file: .env
   django:
     build: ./api
-    command: ["python", "manage.py", "runserver", "0.0.0.0:5000"]
+    command: ["python", "manage.py", "runserver", "0.0.0.0:5500"]
     volumes:
       - ./api:/app/api
     ports:
-      - "5000:5000"
+      - "5500:5500"
     depends_on:
       - db
   frontend:

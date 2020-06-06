@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import TopNavbar from "./layouts/navbar";
+// import TopNavbar from "./layouts/navbar";
 import { Container, Button } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Router from "./routes/route";
@@ -7,6 +7,8 @@ import styled from "styled-components";
 import Recruit from "./pages/recruit";
 import Introduce from "./pages/introduce";
 import Home from "./pages/home";
+import NavButton from './components/navButton'
+import ContentContainer from './components/contents/contentContainer'
 
 const StyledNavItem = styled.li`
   display: inline;
@@ -54,8 +56,8 @@ const RoutedContent = () => {
     <>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/recruit" component={Recruit} />
-        <Route exact path="/introduce" component={Introduce} />
+        <Route path="/recruit" component={Recruit} />
+        <Route path="/introduce" component={Introduce} />
       </Switch>
     </>
   );
@@ -63,15 +65,11 @@ const RoutedContent = () => {
 
 export const App = (props) => {
   const [content, setContent] = useState(Home);
-//   useEffect( () => {
-
-//   })
 
   return (
     <>
       <BrowserRouter>
         <Navbar></Navbar>
-        <hr />
         <div>
           <RoutedContent component={content}/>
         </div>

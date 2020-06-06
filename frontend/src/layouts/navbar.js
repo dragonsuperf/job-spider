@@ -32,21 +32,6 @@ const TopNavbar = (props) => {
               <Link to="/recruit">채용공고</Link>
               <Link to="/introduce">셀프구직</Link>
             </Router>
-            
-            {/* <NavItem href="/recruit">
-              <NavLink color={"primary"}>채용공고</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/introduce">셀프구직</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink>받은제안</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/dragonsuperf/job-spider">
-                GitHub
-              </NavLink>
-            </NavItem> */}
           </Nav>
           <NavbarText>안녕하세요 반갑습니다.</NavbarText>
         </Collapse>

@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default () => {
+const Recruit =  () => {
     return (
-        <>
+        <div>
             <h1>채용공고</h1>
-        </>
+        </div>
     )
 }
+
+export default Recruit

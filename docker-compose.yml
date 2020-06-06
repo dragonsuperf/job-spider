@@ -19,13 +19,16 @@ services:
       - db
   frontend:
     build: ./frontend
-    command: ["npm", "start"]
+    # command:
+    #   - ./start-dev.sh
     volumes:
       - ./frontend:/app/frontend
       - ./frontend/dist:/app/frontend/dist
-      - node-modules:/app/frontend/node_modules
+      - ./frontend/node_modules:/app/frontend/node_modules
     ports:
       - "3000:3000"
+    environment:
+      - CHOKIDAR_USEPOLLING=ture
 
 volumes:
   node-modules:

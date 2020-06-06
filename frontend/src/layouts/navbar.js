@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -26,9 +27,9 @@ const TopNavbar = (props) => {
         <NavbarBrand href="/">Job Spider</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink >채용공고</NavLink>
+          <Nav className="mr-auto info" navbar fill>
+            <NavItem >
+              <NavLink color={'primary'}>채용공고</NavLink>
             </NavItem>
             <NavItem>
               <NavLink >기업목록</NavLink>
@@ -40,7 +41,7 @@ const TopNavbar = (props) => {
               <NavLink href="https://github.com/dragonsuperf/job-spider">GitHub</NavLink>
             </NavItem>
           </Nav>
-          <NavbarText>안녕하세요</NavbarText>
+          <NavbarText>안녕하세요 반갑습니다.</NavbarText>
         </Collapse>
       </Navbar>
     </div>

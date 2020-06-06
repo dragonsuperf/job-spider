@@ -3,7 +3,7 @@ import '@babel/polyfill'
 // import 'regenerator-runtime/runtime'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { App } from './components/App'
+import { App } from './App'
 import '../public/bootstrap.css';
 import '../public/App.css'
 

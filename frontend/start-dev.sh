@@ -1,4 +1,4 @@
 #!/bin/sh
-npm i
-npm run dev:build
-npm start
+yarn
+yarn run dev:build
+yarn start

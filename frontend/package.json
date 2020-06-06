@@ -42,11 +42,13 @@
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "reactstrap": "^8.4.1",
     "react-hot-loader": "^4.12.21",
+    "react-router-dom": "^5.2.0",
+    "reactstrap": "^8.4.1",
     "regenerator-runtime": "^0.13.5",
     "rimraf": "^3.0.2",
     "style-loader": "^1.2.1",
+    "styled-components": "^5.1.1",
     "url-loader": "^4.1.0"
   }
 }

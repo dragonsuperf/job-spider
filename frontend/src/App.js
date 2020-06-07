@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-// import TopNavbar from "./layouts/navbar";
-import { Container, Button } from "reactstrap";
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import Router from "./routes/route";
 import styled from "styled-components";
 import Recruit from "./pages/recruit";
 import Introduce from "./pages/introduce";
 import Home from "./pages/home";
-import NavButton from './components/navButton'
-import ContentContainer from './components/contents/contentContainer'
 
 const StyledNavItem = styled.li`
   display: inline;
@@ -16,36 +11,48 @@ const StyledNavItem = styled.li`
   border: 1px solid black;
   margin: 10px;
   padding: 3px;
-`;
+`
 
-const StyledNavbar = styled.ul`
+const StyledNavbar = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   list-style-type: none;
   border: 1px solid black;
   padding: 5px;
-`;
+  margin: 0px;
+  position: -webkit-sticky;
+  top: 0;
+`
+
+const StyleFooter = styled.footer`
+  margin: 0px;
+  padding: 10px, 15%, 10px, 15%;
+  background-color: #EBDEF0;
+  bottom: 0;
+`
 
 const Navbar = () => {
   return (
     <>
       <StyledNavbar>
-        <StyledNavItem>
-          <Link to="/">
-            <button>Home</button>
-          </Link>
-        </StyledNavItem>
-        <StyledNavItem>
-          <Link to="/recruit">
-            <button>채용공고</button>
-          </Link>
-        </StyledNavItem>
-        <StyledNavItem>
-          <Link to="/introduce">
-            <button>셀프구직</button>
-          </Link>
-        </StyledNavItem>
+        <ul>
+          <StyledNavItem>
+            <Link to="/">
+              <button>Home</button>
+            </Link>
+          </StyledNavItem>
+          <StyledNavItem>
+            <Link to="/recruit">
+              <button>채용공고</button>
+            </Link>
+          </StyledNavItem>
+          <StyledNavItem>
+            <Link to="/introduce">
+              <button>셀프구직</button>
+            </Link>
+          </StyledNavItem>
+        </ul>
       </StyledNavbar>
     </>
   );
@@ -63,6 +70,16 @@ const RoutedContent = () => {
   );
 };
 
+const Footer = () => {
+  return (
+    <StyleFooter>
+      <div>
+        <h1>This is Footer</h1>
+      </div>
+    </StyleFooter>
+  )
+}
+
 export const App = (props) => {
   const [content, setContent] = useState(Home);
 
@@ -73,6 +90,7 @@ export const App = (props) => {
         <div>
           <RoutedContent component={content}/>
         </div>
+        <Footer></Footer>
       </BrowserRouter>
     </>
   );

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, ContentArea  } from "../../styles/pageStyle";
+import { Container, ContentArea  } from "./layoutStyle";
 
 
 export const ContenArea = (props) => {
@@ -10,10 +10,11 @@ export const ContenArea = (props) => {
 
 export const StyleContainer = (props) => {
 
-    // const [bgColor, setBgColor] = useState(props.bgColor)
     return (
         <Container >
-            <ContentArea ></ContentArea>
+            <ContentArea >
+
+            </ContentArea>
         </Container>
     )
 }

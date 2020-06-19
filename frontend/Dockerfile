@@ -1,8 +1,8 @@
-FROM node:lts-buster
+FROM node
 
 WORKDIR /app/frontend
-ADD ./ /app/frontend
-# ADD ./start_dev.sh /app/frontend/
+ADD . /app/frontend
+
 
 EXPOSE 3000
 

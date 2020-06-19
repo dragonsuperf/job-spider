@@ -1,0 +1,21 @@
+header {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    background: mistyrose;
+}
+
+.contentArea {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+
+    background: lightblue;
+}
+
+footer {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    background: lightgreen;
+}

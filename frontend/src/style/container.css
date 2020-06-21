@@ -79,13 +79,16 @@ footer {
 
 .menu_item__link {
     font-size: 1.4rem;
+
 }
 
 .nav_links {
     background: tan;
-    margin-right: 20px;
+    margin: 0px 20px 0px 20px;
+    padding: 0px;
     display: flex;
     direction: row;
+    justify-content: space-around;
 }
 
 .nav_icon{
@@ -109,4 +112,25 @@ footer {
         display: block;
         margin-right: 25px;
     }
+}
+
+.page_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page_list {
+    background: #EBDEF0;
+    margin: 5px;
+    display: flex;
+    direction: row;
+}
+
+.page_item {
+    border: 1px solid #ABB2B9;
+    background: #F4F6F6;
+    border-radius: 4px;
+    padding: 4px 8px 4px 8px;
+    margin: 4px 3px 4px 3px;
 }

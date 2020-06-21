@@ -1,6 +1,7 @@
 import React, { useEffect, Fragment } from "react";
 
 import data from "../../datas.json";
+import Pagination from '../uiComponents/pagination'
 
 const randomTen = max => Math.floor(Math.random() * max);
 const randomeMinMax = (min, max) => {
@@ -161,13 +162,13 @@ export const FilterArea = () => {
   );
 };
 
-export const Pagination = props => {
-  return (
-    <Fragment>
-      <h3>Pagination</h3>
-    </Fragment>
-  );
-};
+// export const Pagination = props => {
+//   return (
+//     <Fragment>
+//       <h3>Pagination</h3>
+//     </Fragment>
+//   );
+// };
 
 export const FilterableTable = () => {
   return (

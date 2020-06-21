@@ -187,7 +187,7 @@ export const FilterableTable = () => {
   );
 };
 
-const ContentArea = props => {
+const RecruitArea = props => {
   return (
     <div className="content_area">
       <FilterableTable />
@@ -195,4 +195,4 @@ const ContentArea = props => {
   );
 };
 
-export default ContentArea
+export default RecruitArea

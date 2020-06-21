@@ -1,4 +1,4 @@
 import React from 'react'
-import ContentArea from './recruitTable/recruit'
+import RecruitArea from './recruitTable/recruit'
 
-export default ContentArea;
+export default RecruitArea;

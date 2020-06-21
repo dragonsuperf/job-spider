@@ -28,6 +28,11 @@ export const HeaderNav = () => {
                             받은 제안
                         </Link>
                     </li>
+                    <li className="menu_item">
+                        <Link to="application" className="menu_item__link">
+                            지원 현황
+                        </Link>
+                    </li>
                 </ul>
             </nav>
             <div className="nav_user">
@@ -53,7 +58,7 @@ export const HeaderNav = () => {
                 </ul>
             </div>
             <img className="mobile_menu__icon" src="/images/menus/burger.png">
-                
+
             </img>
         </header>
     )

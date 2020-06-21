@@ -47,7 +47,7 @@ export const Logo = props => {
 
   return (
     <Fragment>
-      <img className="logo" src={setLogo(15)} alt="{props.name}" />
+      <img className="logo" src={setLogo(15)} title={props.name} />
     </Fragment>
   );
 };
@@ -137,14 +137,6 @@ export const RecruitDropdown = props => {
     </span>
   );
 };
-
-// export const FilterItem = props => {
-//   return (
-//     <span className="filter_item">
-
-//     </span>
-//   )
-// }
 
 export const Filter = props => {
   return (

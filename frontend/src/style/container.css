@@ -9,11 +9,17 @@ header {
 }
 
 .contentArea {
-    margin: 0px;
+    margin: 40px 100px 40px 100px;
     padding: 0px;
     display: block;
 
     background: lightblue;
+}
+
+@media screen and (max-width: 576px) {
+    .contentArea {
+        margin: 10px;
+    }
 }
 
 footer {
@@ -42,6 +48,18 @@ footer {
 
 @media screen and (max-width: 576px) {
     .site_title {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav_center {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .nav_user {
         display: none;
     }
 }
@@ -77,4 +95,18 @@ footer {
 
 .icon_tooltip{
     display: none;
+}
+
+.mobile_menu__icon{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .mobile_menu__icon {
+        display: block;
+        margin-right: 25px;
+    }
 }

@@ -11,7 +11,7 @@ export const HeaderNav = () => {
                     height="50rem"/>
                 <h1 className="site_title">Job-Spider</h1>
             </div>
-            <nav>
+            <nav className="nav_center">
                 <ul className="nav_menus">
                     <li className="menu_item">
                         <Link to="/" className="menu_item__link">
@@ -30,26 +30,31 @@ export const HeaderNav = () => {
                     </li>
                 </ul>
             </nav>
-            <div className="nav_links">
-                <div className="nav_link">
-                    <Link className="nav_link__href" to="resume">
-                        <i className="nav_icon fas fa-file-alt"></i>
-                    </Link>
-                    {/* 툴팁 */}
-                    <p className="icon_tooltip">이력서</p>
-                </div>
-                <div className="nav_link">
-                    <i className="nav_icon fas fa-bell"></i>
-                    {/* 툴팁 */}
-                    <p className="icon_tooltip">알림</p>
-                </div>
-                <div className="nav_link">
-                    <i className="nav_icon fas fa-id-badge"></i>
-                    {/* 툴팁 */}
-                    <p className="icon_tooltip">마이페이지</p>
-                </div>
-                
+            <div className="nav_user">
+                <ul className="nav_links">
+                    <li className="nav_link">
+                        <Link className="nav_link__href" to="resume">
+                            <i className="nav_icon fas fa-file-alt" title="이력서"></i>
+                        </Link>
+                        {/* 툴팁 */}
+                        <p className="icon_tooltip">이력서</p>
+                    </li>
+                    <li className="nav_link">
+                        <i className="nav_icon fas fa-bell" title="알림"></i>
+                        {/* 툴팁 */}
+                        <p className="icon_tooltip">알림</p>
+                    </li>
+                    <li className="nav_link">
+                        <i className="nav_icon fas fa-id-badge" title="마이페이지"></i>
+                        {/* 툴팁 */}
+                        <p className="icon_tooltip">마이페이지</p>
+                    </li>
+                    
+                </ul>
             </div>
+            <img className="mobile_menu__icon" src="/images/menus/burger.png">
+                
+            </img>
         </header>
     )
 }

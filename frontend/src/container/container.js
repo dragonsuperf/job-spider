@@ -9,12 +9,12 @@ const Container = () => {
     return (
         <div>
             <HeaderNav/>
-                <div>
-                    <Route path="/" exact={true} component={RecruitArea}/>
-                    <Route path="/company" component={CompaniesArea}/>
-                    <Route path="/offer" component={OfferArea}/>
-                    <Route path="/resume" component={ResumeArea}/>
-                </div>
+            <div className="contentArea">
+                <Route path="/" exact={true} component={RecruitArea}/>
+                <Route path="/company" component={CompaniesArea}/>
+                <Route path="/offer" component={OfferArea}/>
+                <Route path="/resume" component={ResumeArea}/>
+            </div>
             <Footer/>
         </div>
     )

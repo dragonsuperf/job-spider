@@ -1,54 +1,19 @@
 import React, { useEffect, Fragment } from "react";
 
-import data from "../../datas.json";
 import Pagination from '../uiComponents/pagination'
+import TagBox from '../tableComponents/tag'
 
-const randomTen = max => Math.floor(Math.random() * max);
-const randomeMinMax = (min, max) => {
-  let num = 0;
-  while (true) {
-    num = Math.floor(Math.random() * max);
-    if (num >= min) {
-      break;
-    }
-  }
-  return num;
-};
+// api가 없어서 임시로 사용하는 데이터와 함수
+import { randomMinMax } from '../../utils/utilFunctions'
+import data from "../../datas.json";
 
-const Tag = props => {
-  return <span className="skill_tag">{data.skills[randomTen(64)]}</span>;
-};
-
-export const SkillTag = props => {
-  const listItem = num => {
-    let tags = [];
-    for (let i = 0; i <= num; i++) {
-      tags.push(<Tag />);
-    }
-    return tags;
-  };
-
-  return (
-    <Fragment>
-        {listItem(randomeMinMax(3, 12))}
-    </Fragment>
-  );
-};
-
-export const TagBox = props => {
-  return (
-    <div className="tagbox">
-      <SkillTag />
-    </div>
-  );
-};
 
 export const Logo = props => {
-  const setLogo = num => `/images/logos/${randomTen(num)}.png`;
+  const setLogo = num => `/images/logos/${randomMinMax(0, num)}.png`;
 
   return (
     <Fragment>
-      <img className="logo" src={setLogo(15)} title={props.name} />
+      <img className="logo" src={setLogo(16)} alt={props.name} />
     </Fragment>
   );
 };
@@ -67,24 +32,27 @@ export const RecruitRowPrimaryInfo = props => {
 export const RecruitRowSecondaryInfo = props => {
   return (
     <div className="recruit_row__secondary">
-      <span className="recuit_row__info">{data.career[randomTen(5)]}</span>
+      <span className="recuit_row__info">{data.career[randomMinMax(0, data.career.length)]}</span>
       <span className="recuit_row__info">{data.address[props.number]}</span>
       <span className="recuit_row__info">
-        {data.signingBonus[randomTen(4)]}
+        {data.signingBonus[randomMinMax(0, 4)]}
       </span>
     </div>
   );
 };
 
 export const RecruitRow = props => {
+
+  const companyName = randomMinMax(0, data.companies.length)
+
   return (
     <tr>
       <td>
         <div className="recruit_row__seperator">
           <Logo />
           <div className="recruit_row__info">
-            <RecruitRowPrimaryInfo number={randomTen(10)} />
-            <RecruitRowSecondaryInfo number={randomTen(10)} />
+            <RecruitRowPrimaryInfo number={randomMinMax(0, 10)} />
+            <RecruitRowSecondaryInfo number={randomMinMax(0, 10)} />
             <TagBox />
           </div>
         </div>
@@ -94,7 +62,7 @@ export const RecruitRow = props => {
 };
 
 export const RecuitTable = props => {
-  useEffect(() => {});
+  // useEffect(() => {});
 
   return (
     <table className="recruit_table">
@@ -162,14 +130,6 @@ export const FilterArea = () => {
   );
 };
 
-// export const Pagination = props => {
-//   return (
-//     <Fragment>
-//       <h3>Pagination</h3>
-//     </Fragment>
-//   );
-// };
-
 export const FilterableTable = () => {
   return (
     <div className="filterable_table">
@@ -181,6 +141,11 @@ export const FilterableTable = () => {
 };
 
 const RecruitArea = props => {
+  const companiesData = () => {
+
+    return {}
+  }
+
   return (
     <div className="content_area">
       <FilterableTable />

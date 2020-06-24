@@ -1,6 +1,3 @@
-
-
-
 export const randomMinMax = (min, max) => {
   let num = 0;
   while (true) {

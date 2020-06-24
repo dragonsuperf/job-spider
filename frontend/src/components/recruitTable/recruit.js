@@ -2,67 +2,17 @@ import React, { useEffect, Fragment } from "react";
 
 import Pagination from '../uiComponents/pagination'
 import TagBox from '../tableComponents/tag'
+import RecruitRow from '../tableComponents/recruitRow'
 
 // api가 없어서 임시로 사용하는 데이터와 함수
 import { randomMinMax } from '../../utils/utilFunctions'
 import data from "../../datas.json";
 
 
-export const Logo = props => {
-  const setLogo = num => `/images/logos/${randomMinMax(0, num)}.png`;
-
-  return (
-    <Fragment>
-      <img className="logo" src={setLogo(16)} alt={props.name} />
-    </Fragment>
-  );
-};
-
-export const RecruitRowPrimaryInfo = props => {
-  return (
-    <Fragment>
-      <div className="recruit_row__main_info">
-        <p className="recruit_row__position ">{data.positions[props.number]}</p>
-        <p className="recruit_row__company ">{data.companies[props.number]}</p>
-      </div>
-    </Fragment>
-  );
-};
-
-export const RecruitRowSecondaryInfo = props => {
-  return (
-    <div className="recruit_row__secondary">
-      <span className="recuit_row__info">{data.career[randomMinMax(0, data.career.length)]}</span>
-      <span className="recuit_row__info">{data.address[props.number]}</span>
-      <span className="recuit_row__info">
-        {data.signingBonus[randomMinMax(0, 4)]}
-      </span>
-    </div>
-  );
-};
-
-export const RecruitRow = props => {
-
-  const companyName = randomMinMax(0, data.companies.length)
-
-  return (
-    <tr>
-      <td>
-        <div className="recruit_row__seperator">
-          <Logo />
-          <div className="recruit_row__info">
-            <RecruitRowPrimaryInfo number={randomMinMax(0, 10)} />
-            <RecruitRowSecondaryInfo number={randomMinMax(0, 10)} />
-            <TagBox />
-          </div>
-        </div>
-      </td>
-    </tr>
-  );
-};
 
 export const RecuitTable = props => {
-  // useEffect(() => {});
+  // const rowList = ()
+
 
   return (
     <table className="recruit_table">
@@ -141,10 +91,19 @@ export const FilterableTable = () => {
 };
 
 const RecruitArea = props => {
-  const companiesData = () => {
+  // const datas = []
+  // const companiesData = () => {
+    
+  //   for(let i = 0; i < data.companies.length; i++){
+  //     datas.push({  })
+  //   }
 
-    return {}
-  }
+
+  //   return {}
+  // }
+
+  // console.log('companies ', data.companies.length)
+  // console.log('address ', data.address.length)
 
   return (
     <div className="content_area">

@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react'
 import RecruitArea from '../components/recruitTable/recruit'
 import data from '../datas.json'
+import RecruitPageComtainer from '../components/containers/companyContainer'
+import { addCompany } from '../modules/redux/actions/companyAction'
 
 const companyList = () =>{
     let list = []
@@ -21,11 +23,16 @@ const companyList = () =>{
 const RecruitPage = () => {
     const [page, setPage] = useState(0)
     const tempList = companyList()
+
+    console.log('company list: ', addCompany())
+
     return(
         <Fragment>
             <RecruitArea list={tempList}></RecruitArea>
         </Fragment>
     )
 }
+
+
 
 export default RecruitPage;

@@ -5,24 +5,23 @@ import data from "../../datas.json";
 import { randomMinMax } from "../../utils/utilFunctions";
 
 export const Tag = (props) => {
-  return <span className="skill_tag">{data.skills[randomMinMax(0, data.skills.length)]}</span>;
+  return (
+    <span className="skill_tag">
+      {data.skills[randomMinMax(0, data.skills.length)]}
+    </span>
+  );
 };
 
 export const SkillTag = (props) => {
   const listItem = (num) => {
     let tags = [];
     for (let i = 0; i <= num; i++) {
-      tags.push(<Tag />);
+      tags.push(<Tag key={i} />);
     }
     return tags;
   };
 
-  return (
-    <Fragment>
-      {/* 적당히 태그 갯수 맟줘줌. */}
-      {listItem(randomMinMax(3, 12))}
-    </Fragment>
-  );
+  return <Fragment>{listItem(randomMinMax(3, 12))}</Fragment>;
 };
 
 const TagBox = (props) => {
@@ -33,4 +32,4 @@ const TagBox = (props) => {
   );
 };
 
-export default TagBox
+export default TagBox;

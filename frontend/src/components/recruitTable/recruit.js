@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from "react";
+import React, { useEffect, useState, Fragment } from "react";
 
 import Pagination from '../uiComponents/pagination'
 import TagBox from '../tableComponents/tag'
@@ -11,8 +11,7 @@ import data from "../../datas.json";
 
 
 export const RecuitTable = props => {
-  // const rowList = ()
-
+  const currentPageCompanies = props.list[0]
 
   return (
     <table className="recruit_table">
@@ -80,34 +79,22 @@ export const FilterArea = () => {
   );
 };
 
-export const FilterableTable = () => {
+export const FilterableTable = (props) => {
+
   return (
     <div className="filterable_table">
       <FilterArea />
-      <RecuitTable />
-      <Pagination />
+      <RecuitTable list={props.list}/>
+      <Pagination list={props.list}/>
     </div>
   );
 };
 
 const RecruitArea = props => {
-  // const datas = []
-  // const companiesData = () => {
-    
-  //   for(let i = 0; i < data.companies.length; i++){
-  //     datas.push({  })
-  //   }
-
-
-  //   return {}
-  // }
-
-  // console.log('companies ', data.companies.length)
-  // console.log('address ', data.address.length)
 
   return (
     <div className="content_area">
-      <FilterableTable />
+      <FilterableTable list={props.list}/>
     </div>
   );
 };

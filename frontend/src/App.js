@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Container from './container/container';
+import Container from './layouts/container';
 
 class App extends Component {
   render() {

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, Fragment } from "react";
 
 import Pagination from '../uiComponents/pagination'
-import TagBox from '../tableComponents/tag'
-import RecruitRow from '../tableComponents/recruitRow'
+import TagBox from './tag'
+import RecruitRow from './recruitRow'
 import PageContainer from '../containers/pageContainer'
 
 // api가 없어서 임시로 사용하는 데이터와 함수

@@ -1,12 +1,31 @@
-import React from 'react';
+import React, { Fragment } from "react";
+import data from "../datas.json";
+import CompanyTable from "../components/companyTables/companyTable";
 
-const CompaniesArea = () => {
+const companyList = () => {
+  let list = [];
+  for (let i = 0; i < 12; i++) {
+    let subList = [];
+    for (let j = 0; j < 10; j++) {
+      let multiple = i * 10;
+      subList.push({
+        company: data.companies[multiple + j],
+        address: data.address[multiple + j],
+      });
+    }
+    list.push(subList);
+  }
+  return list;
+};
+
+const CompanyPage = () => {
+  const tmpList = companyList();
+
   return (
-    <div>
-      <h1>회사 목록</h1>
-      <p>개발자를 채용하고 있는 회사의 목록입니다.</p>
-    </div>
+    <Fragment>
+      <CompanyTable list={companyList()}></CompanyTable>
+    </Fragment>
   );
 };
 
-export default CompaniesArea;
+export default CompanyPage;

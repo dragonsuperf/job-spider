@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ResumeArea = () => {
+const ResumePage = () => {
   return (
     <div>
       <h1>이력서 페이지</h1>
@@ -9,4 +9,4 @@ const ResumeArea = () => {
   );
 };
 
-export default ResumeArea;
+export default ResumePage;

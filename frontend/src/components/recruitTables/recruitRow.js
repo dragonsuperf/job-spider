@@ -11,7 +11,7 @@ export const Logo = (props) => {
 
   return (
     <Fragment>
-      <img className="logo" src={setLogo(16)} alt={props.name} />
+      <img className="logo" src={setLogo(16)} />
     </Fragment>
   );
 };

@@ -1,0 +1,42 @@
+.company_table {
+    background: #F6DDCC;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.company_card{
+    margin: 5px;
+    padding: 5px;
+    width: 15rem;
+    flex-basis: 31%;
+    background: #E8DAEF;
+}
+
+.company_section {
+    display: flex;
+    flex-direction: row;
+}
+
+.company_logo{
+    margin: 0.5rem;
+}
+
+.company_info {
+    margin: 0.5rem;
+    border: 1px solid black;
+    padding: 0px 4px 0px 4px;
+}
+
+
+.company_info__name {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.company_info__address {
+    font-size: 0.8rem;
+    color: #808B96;
+}

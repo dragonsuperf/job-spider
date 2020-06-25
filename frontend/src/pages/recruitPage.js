@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react'
-import RecruitArea from '../components/recruitTable/recruit'
+import RecruitArea from '../components/recruitTables/recruit'
 import data from '../datas.json'
 import RecruitPageComtainer from '../components/containers/companyContainer'
 import { addCompany } from '../modules/redux/actions/companyAction'

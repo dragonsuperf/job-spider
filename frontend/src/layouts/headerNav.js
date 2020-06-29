@@ -23,43 +23,27 @@ export const HeaderNav = () => {
                             회사 목록
                         </Link>
                     </li>
-                    <li className="menu_item">
-                        <Link to="offer" className="menu_item__link">
-                            받은 제안
-                        </Link>
-                    </li>
-                    <li className="menu_item">
-                        <Link to="application" className="menu_item__link">
-                            지원 현황
-                        </Link>
-                    </li>
                 </ul>
             </nav>
-            <div className="nav_user">
+            {/* <div className="nav_user">
                 <ul className="nav_links">
                     <li className="nav_link">
                         <Link className="nav_link__href" to="resume">
                             <i className="nav_icon fas fa-file-alt" title="이력서"></i>
                         </Link>
-                        {/* 툴팁 */}
                         <p className="icon_tooltip">이력서</p>
                     </li>
                     <li className="nav_link">
                         <i className="nav_icon fas fa-bell" title="알림"></i>
-                        {/* 툴팁 */}
                         <p className="icon_tooltip">알림</p>
                     </li>
                     <li className="nav_link">
                         <i className="nav_icon fas fa-id-badge" title="마이페이지"></i>
-                        {/* 툴팁 */}
                         <p className="icon_tooltip">마이페이지</p>
                     </li>
-                    
                 </ul>
-            </div>
-            <img className="mobile_menu__icon" src="/images/menus/burger.png">
-
-            </img>
+                </div> */}
+            <img className="mobile_menu__icon" src="/images/menus/burger.png"/>
         </header>
     )
 }

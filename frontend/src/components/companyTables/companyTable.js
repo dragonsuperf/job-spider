@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import CompanyList from "./companyList";
 import { Link } from "react-router-dom";
-import {randomMinMax} from '../../utils/utilFunctions'
+import { randomMinMax } from "../../utils/utilFunctions";
 
 const CompanyCard = (props) => {
-    const setLogo = (num) => `/images/logos/${randomMinMax(0, num)}.png`;
+  const setLogo = (num) => `/images/logos/${randomMinMax(0, num)}.png`;
   return (
     <li className="company_card">
       <Link>

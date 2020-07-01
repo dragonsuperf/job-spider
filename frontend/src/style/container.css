@@ -1,145 +1,164 @@
-header {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    direction: row;
-    justify-content: space-between;
-    background: mistyrose;
-    align-items: center;
-    justify-content: flex-start;
+.header_nav {
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  background: #053b5a;
+  align-items: center;
+  position: static;
+  box-sizing: content-box;
 }
 
 .contentArea {
-    margin: 40px 100px 40px 100px;
-    padding: 0px;
-    display: block;
-
-    background: lightblue;
+  margin: 20px 100px 20px 100px;
+  padding: 0px;
+  display: block;
 }
 
 @media screen and (max-width: 576px) {
-    .contentArea {
-        margin: 10px;
-    }
+  .contentArea {
+    margin: 20px;
+  }
 }
 
 footer {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    background: lightgreen;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  background: lightgreen;
 }
 
 .nav_title {
-    background: mistyrose;
-    margin-left: 20px;
-    display: flex;
-    direction: row;
-    align-items: center;
-
+  vertical-align: middle;
+  position: absolute;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-.site_title{
-    margin-left: 10px;
-    padding: 0px;
-
-}
-
-.site_logo{
-    margin: 5px;
+@media screen and (max-width: 576px) {
+  .nav_title {
+    display: none;
+  }
 }
 
 .nav_center {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
+  background-color: #053b5a;
+  height: 100%;
 }
 
 @media screen and (max-width: 576px) {
-    .site_title {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .nav_center {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .nav_user {
-        display: none;
-    }
+  .nav_center {
+    display: none;
+  }
 }
 
 .nav_menus {
-    background: palegreen;
-    /* margin: 10px 0px 10px 0px; */
-    padding: 0px;
-    display: flex;
-    direction: row;
-    justify-content: center;
+  padding: 0px;
+  display: flex;
+  direction: row;
+  justify-content: center;
 }
 
-.menu_item{
-    background: sandybrown;
-    margin: 0px 5px 0px 5px;
+.menu_item {
+  background: #002236;
+  margin: 0px 10px 0px 10px;
+  border-radius: 6px;
+  height: 36px;
+  width: 120px;
+  
 }
 
 .menu_item__link {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
+  vertical-align: middle;
+}
 
+li > .menu_item__link {
+  color: white;
+  
 }
 
 .nav_links {
-    background: tan;
-    margin: 0px 20px 0px 20px;
-    padding: 0px;
-    display: flex;
-    direction: row;
-    justify-content: space-around;
+  background: tan;
+  margin: 0px 20px 0px 20px;
+  padding: 0px;
+  display: flex;
+  direction: row;
+  justify-content: space-around;
 }
 
-.nav_icon{
-    margin: 10px;
-    font-size: 1.5rem;
+.nav_icon {
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
-.icon_tooltip{
-    display: none;
+.icon_tooltip {
+  display: none;
 }
 
-.mobile_menu__icon{
-    width: 3rem;
-    height: 3rem;
-    margin-right: 20px;
-    display: none;
+.mobile_nav {
+  display: none;
 }
 
 @media screen and (max-width: 576px) {
-    .mobile_menu__icon {
-        display: block;
-        margin-right: 25px;
-    }
+  .mobile_nav {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    background-color: #053b5a;
+    height: 100%;
+  }
 }
 
-.page_container{
+.hidden_title {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .hidden_title {
+    margin: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+}
+
+.mobile_menu {
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .mobile_menu {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+  }
+
+  .mobile_menu__icon {
+    width: 40px;
+  }
+}
+
+.page_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .page_list {
-    background: #EBDEF0;
-    margin: 5px;
-    display: flex;
-    direction: row;
+  background: #ebdef0;
+  margin: 5px;
+  display: flex;
+  direction: row;
 }
 
 .page_item {
-    border: 1px solid #ABB2B9;
-    background: #F4F6F6;
-    border-radius: 4px;
-    padding: 4px 8px 4px 8px;
-    margin: 4px 3px 4px 3px;
+  border: 1px solid #abb2b9;
+  background: #f4f6f6;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  margin: 4px 3px 4px 3px;
 }
